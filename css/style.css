@@ -1,0 +1,20 @@
+ .header{text-align: center;padding: 50px 0px;background: #3ba3e2;color:#fff;}
+
+ .header h1{color: #fff;margin: 0;padding: 0;}
+
+
+.output-box{border:1px solid #ccc;padding: 10px;min-height: 232px;overflow: hidden;box-shadow:inset 2px 2px 3px rgba(0,0,0,0.1);}
+.input-cover{margin-bottom: 20px;}
+
+.tag-item{display: block;color:#fff;background: #ddd;margin: 2px;border-radius: 3px;float: left;clear: left;box-shadow:0 1px 1px rgba(0,0,0,0.3);}
+.tag-item span{display: inline-block;padding: 3px 8px;cursor: pointer;}
+.tag-item a{display: inline-block;text-decoration: none;color: #fff;padding: 3px 8px 3px 0px;}
+
+
+.box-positive .tag-item{background: #00ff00;}
+.box-negative .tag-item{background: #ff0000;}
+.entry-form label{display: block;}
+
+.entry-form{padding: 30px;background: #ececec;border: 1px solid #ddd;margin-bottom: 50px;}
+.val-msg{font-weight:normal;color:#ff0000;padding-left: 20px;display: inline-block;float: right;}
+.main-wrap{padding: 50px 0px;}
