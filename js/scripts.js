@@ -1,4 +1,4 @@
-$(".btn-primary").click(function () {
+$( "#entry-form" ).submit(function( event ) {
     var term = $(".term-input").val();
     var type = $(".type-input").val();
     var valid = 1;
@@ -40,14 +40,16 @@ $(".btn-primary").click(function () {
     listitems.each(function () {
         if ($(this).find("span").text().localeCompare(term) > 0) {
 
-            $("<div class='tag-item'><span>" + term + "</span><a href='#'>X</a></div>").insertBefore($(this)).hide().slideDown("fast");
+            $("<div class='tag-item'><span>" + term + "</span><a href='#' class='glyphicon glyphicon-remove'></a></div>").insertBefore($(this)).hide().slideDown("fast");
             added = true;
             return false;
         }
     });
     if (!added) {
-        $("<div class='tag-item'><span>" + term + "</span><a href='#'>X</a></div>").appendTo($elem).hide().slideDown("fast");
+        $("<div class='tag-item'><span>" + term + "</span><a href='#' class='glyphicon glyphicon-remove'></a></div>").appendTo($elem).hide().slideDown("fast");
     }
+    event.preventDefault();
+
 });
 $(document.body).on("click", ".tag-item a", function (e) {
     $(".term-input").val("");
