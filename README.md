@@ -1,2 +1,2 @@
-# Excercise
+# Exercise
 Basic Programming Exercise 
