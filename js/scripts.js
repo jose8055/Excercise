@@ -49,13 +49,14 @@ $(".btn-primary").click(function () {
         $("<div class='tag-item'><span>" + term + "</span><a href='#'>X</a></div>").appendTo($elem).hide().slideDown("fast");
     }
 });
-$(document.body).on("click", ".tag-item a", function () {
+$(document.body).on("click", ".tag-item a", function (e) {
     $(".term-input").val("");
     $(".val-msg").remove();
     $(".type-input").prop("selectedIndex", 0);
     $(this).parent(".tag-item").slideUp(300, function () {
         $(this).remove();
     });
+    e.preventDefault();
 });
 
 
